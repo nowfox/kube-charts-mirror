@@ -30,9 +30,9 @@ $ git clone https://github.com/${YourUsername}/kube-charts-mirror.git
 ```
 docker build -t kube-charts-updater .
 docker run \
--e GIT_REPO=https://${YourUsername}:XXX@github.com/${YourUsername}/kube-charts-mirror.git \ 
--e GIT_USER_NAME=${YourUsername} \ 
--e GIT_USER_EMAIL=${YourEmail}  \ 
+-e GIT_REPO=https://${YourUsername}:XXX@github.com/${YourUsername}/kube-charts-mirror.git \
+-e GIT_USER_NAME=${YourUsername} \
+-e GIT_USER_EMAIL=${YourEmail}  \
 -v /data/charts:/mnt/charts -d kube-charts-updater
 ```
 
